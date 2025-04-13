@@ -1,0 +1,3 @@
+# HTML Beautifier
+
+The HTML Beautifier add-on for Concrete CMS is a powerful tool that automatically processes and beautifies your site's HTML code before it's sent to the client. Once installed, it scans the HTML output and ensures the code is well-structured, eliminating clutter and improving readability. This tool is perfect for developers who want to ensure that their website's HTML remains clean, organized, and easy to maintain while enhancing the performance and clarity of the site's code. With HTML Beautifier, you can provide a more streamlined and accessible experience for both developers and browsers, ensuring better readability and easier debugging.
