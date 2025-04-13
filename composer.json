@@ -1,5 +1,6 @@
 {
   "name": "bitter/html_beautifier",
+  "type": "concrete5-package",
   "description": "An HTML post-processor that cleans and structures the HTML code of your site before it's delivered to the client.",
   "require": {
     "gajus/dindent": "^2.0"
