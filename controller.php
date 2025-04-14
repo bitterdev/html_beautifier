@@ -13,7 +13,7 @@ use Symfony\Component\EventDispatcher\GenericEvent;
 class Controller extends Package
 {
     protected string $pkgHandle = 'html_beautifier';
-    protected string $pkgVersion = '0.0.1';
+    protected string $pkgVersion = '0.0.2';
     protected $appVersionRequired = '9.0.0';
 
     public function getPackageDescription(): string

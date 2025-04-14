@@ -4,5 +4,13 @@
   "description": "An HTML post-processor that cleans and structures the HTML code of your site before it's delivered to the client.",
   "require": {
     "gajus/dindent": "^2.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "sh ./cleanup-vendor-code.sh"
+    ],
+    "post-update-cmd": [
+      "sh ./cleanup-vendor-code.sh"
+    ]
   }
 }

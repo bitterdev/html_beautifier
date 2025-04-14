@@ -26,6 +26,22 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        composer: {
+            options: {
+                usePhp: true,
+                composerLocation: './node_modules/getcomposer/composer.phar'
+            },
+            dev: {
+                options: {
+                    flags: ['ignore-platform-reqs']
+                }
+            },
+            release: {
+                options: {
+                    flags: ['no-dev']
+                }
+            }
+        },
         copy: {
             main: {
                 files: [
@@ -49,14 +65,16 @@ module.exports = function (grunt) {
             }
         },
         clean: {
-            dist: ['dist']
+            dist: ['dist'],
+            composer: ['vendor', 'composer.lock']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-composer');
     grunt.loadNpmTasks('grunt-version');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['clean:dist', 'copy', 'version', 'compress:main', 'clean:dist']);
+    grunt.registerTask('default', ['clean:dist', 'copy', 'version', 'clean:composer', 'composer:dev:install', 'compress:main', 'clean:dist']);
 };
